@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-floating-social-share@2.3.0/dist/jquery.floating-social-share.min.css" integrity="sha256-xR2B+zQtr48HjVHVPIK6Z+JEX7AVis62UqZe74T1CcE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" integrity="sha256-3h45mwconzsKjTUULjY+EoEkoRhXcOIU4l5YAw2tSOU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" integrity="sha256-etrwgFLGpqD4oNAFW08ZH9Bzif5ByXK2lXNHKy7LQGo=" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
 
   <style>
     .hero-body {
@@ -43,10 +45,14 @@
       max-width: 200px;
       border: none !important;
     }
+
+    .tabs a {
+      border: none !important;
+    }
     
-  .tabs a {
-    border: none !important;
-  }
+    .slider-navigation-next, .slider-navigation-previous {
+      visibility: hidden;
+    }
   </style>
 </head>
 
@@ -97,17 +103,34 @@
 
         <div class="columns is-vcentered">
           <div class="column is-half">
-
-            <div id="carousel" class="is-hidden-touch">
-              <img src="./assets/preview_iphonex_portrait_sad.png">
-              <img src="./assets/preview_iphonex_portrait_happy.png">
-              <img src="./assets/preview_iphonex_portrait_settings.png">
-              <img src="./assets/preview_nexus4_angle1_sad.png.png">
-              <img src="./assets/preview_nexus4_portrait_happy.png">
-              <img src="./assets/preview_nexus4_portrait_settings.png">
+            <!-- Start Carousel -->
+            <div id="carousel-demo" class="carousel is-hidden-mobile" style="overflow: hidden;">
+              <div class="item-1">
+                <img src="./assets/preview_iphonex_portrait_sad.png">
+              </div>
+              <div class="item-2">
+                <img src="./assets/preview_iphonex_portrait_happy.png">
+              </div>
+              <div class="item-3">
+                <img src="./assets/preview_iphonex_portrait_settings.png">
+              </div>
+              <div class="item-4">
+                <img src="./assets/preview_nexus4_angle1_sad.png.png">
+              </div>
+              <div class="item-5">
+                <img src="./assets/preview_nexus4_portrait_happy.png">
+              </div>
+              <div class="item-6">
+                <img src="./assets/preview_nexus4_portrait_settings.png">
+              </div>
+              <div class="item-7">
+                <img src="./assets/preview_iphonex_portrait_sad.png" class="is-hidden-desktop">
+              </div>
             </div>
-
-            <img src="./assets/preview_iphonex_portrait_sad.png" class="is-hidden-desktop">
+            <div class="is-hidden-desktop">
+             <figure><img src="./assets/preview_iphonex_portrait_sad.png" class="is-hidden-desktop"></figure>
+            </div>
+            <!-- End Carousel -->
           </div>
 
           <div class="column is-half">
@@ -435,21 +458,22 @@
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-floating-social-share@2.3.0/dist/jquery.floating-social-share.min.js" integrity="sha256-Wh9v88l3JPpn5UbDL1VDcxuAmd/SWzbt4jH/DT94anc=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" integrity="sha256-DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A=" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
 
   <script>
+    bulmaCarousel.attach('#carousel-demo', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      autoplay: true,
+      navigation: false,
+      navigationKeys: false,
+      loop: true
+    });
+
+  </script>
+  <script>
     $(document).ready(function() {
-      // Carousel
-      $('#carousel').slick({
-        accessibility: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        infinite: true,
-        arrows: false,
-        dots: true,
-        slidesToShow: 1,
-      });
 
       // Social Media
       $("body").floatingSocialShare({
