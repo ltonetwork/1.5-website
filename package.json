@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/houjehaags"
+    "url": "https://github.com/ltonetwork/1.5-website"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
