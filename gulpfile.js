@@ -153,6 +153,7 @@ function watchFiles() {
   watch(['src/assets/scss/**/*', 'src/assets/scss/*'] , compileSCSS);
   watch('src/assets/js/*.js', compileJS);
   watch('src/assets/img/**/*', copyImages);
+  watch('src/assets/docs/*', copyDocuments)
 }
 
 
@@ -195,6 +196,19 @@ function copyData() {
     'src/data/**/*',
   ])
     .pipe(dest('dist/assets/data'))
+    .pipe(browserSync.stream());
+}
+
+
+// COPY DOCUMENTS
+// -----------------------------------------------------------------------------
+
+function copyDocuments() {
+  console.log('---------------COPYING DOCS INTO DIST FOLDER---------------');
+  return src([
+      'src/assets/docs/*',
+    ])
+    .pipe(dest('dist/assets/docs'))
     .pipe(browserSync.stream());
 }
 
@@ -301,8 +315,8 @@ exports.accessibility = HTMLAccessibility;
 exports.setup = series(setupBulma);
 
 // DEV
-exports.dev = series(cleanDist, copyFont, copyData, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS, browserSyncInit, watchFiles);
+exports.dev = series(cleanDist, copyFont, copyData, copyDocuments, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS, browserSyncInit, watchFiles);
 
 // BUILD
-exports.build = series(cleanDist, copyFont, copyData, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS);
+exports.build = series(cleanDist, copyFont, copyData, copyDocuments, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS);
 
