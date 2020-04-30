@@ -199,7 +199,6 @@ function copyData() {
     .pipe(browserSync.stream());
 }
 
-
 // COPY DOCUMENTS
 // -----------------------------------------------------------------------------
 
@@ -209,6 +208,18 @@ function copyDocuments() {
       'src/assets/docs/*',
     ])
     .pipe(dest('dist/assets/docs'))
+    .pipe(browserSync.stream());
+}
+
+// COPY CNAME
+// -----------------------------------------------------------------------------
+
+function copyCNAME() {
+  console.log('---------------COPYING CNAME CONFIG INTO DIST FOLDER---------------');
+  return src([
+      'src/cname/*',
+    ])
+    .pipe(dest('dist/'))
     .pipe(browserSync.stream());
 }
 
@@ -318,5 +329,5 @@ exports.setup = series(setupBulma);
 exports.dev = series(cleanDist, copyFont, copyData, copyDocuments, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS, browserSyncInit, watchFiles);
 
 // BUILD
-exports.build = series(cleanDist, copyFont, copyData, copyDocuments, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS);
+exports.build = series(cleanDist, copyFont, copyData, copyDocuments, copyCNAME, jsVendor, cssVendor, copyImages, compileHTML, concatPlugins, concatCssPlugins, compileJS, resetPages, prettyHTML, compileSASS, compileSCSS);
 
