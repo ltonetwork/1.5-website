@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags always come first -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <title> 1point5 - {{title}}</title>
-        <link rel="shortcut icon" href="{{root}}assets/img/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="{{root}}assets/img/favicon.ico" type="image/x-icon">
+<head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="robots" content="index, follow">
 
-        <!--Core CSS -->
-        <link rel="stylesheet" href="{{root}}assets/css/bulma.css">
-        <link rel="stylesheet" type="text/css" href="{{root}}assets/css/core.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Heebo:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Primary Meta Tags -->
+  <title> 1point5 - {{title}}</title>
+  <meta name="title" content="1point5 - The app that helps you with social distancing.">
+  <meta name="description" content="The app that helps you with social distancing. For iOS and Android.">
 
-    </head>
-    <body>
-<!--        {{> preloader}}-->
-        {{> body}}
-        {{> footer}}
-        {{> backtotop}}
-<!--        {{> sidebar}}-->
-        {{> scripts}}
-    </body>  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://onepointfive.app">
+  <meta property="og:title" content="1point5 - The app that helps you with social distancing.">
+  <meta property="og:description" content="The app that helps you with social distancing. For iOS and Android.">
+  <meta property="og:image" content="https://onepointfive.app/assets/img/social.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="http://onepointfive.app" />
+  <meta name="twitter:site" content="@1Point5App" />
+  <meta name="twitter:title" content="1point5 - The app that helps you with social distancing." />
+  <meta name="twitter:description" content="The app that helps you with social distancing. For iOS and Android." />
+  <meta name="twitter:image" content="https://onepointfive.app/assets/img/social.png" />
+
+  <link rel="shortcut icon" href="{{root}}assets/img/favicon.png" type="image/png">
+  <link rel="icon" href="{{root}}assets/img/favicon.png" type="image/png">
+
+  <!--Core CSS -->
+  <link rel="stylesheet" href="{{root}}assets/css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="{{root}}assets/css/core.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Heebo:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161982650-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161982650-1');
+
+  </script>
+
+</head>
+
+<body>
+  {{> body}}
+  {{> footer}}
+  {{> backtotop}}
+  {{> scripts}}
+</body>
+
 </html>
