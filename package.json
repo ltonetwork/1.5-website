@@ -1,12 +1,18 @@
 {
   "name": "1point5",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "gulp dev",
     "deploy": "gulp build && gh-pages -d dist --dotfiles=true --cleanup"
   },
   "author": "Houjehaags",
+  "contributors": [{
+    "name" : "BB Jansen",
+    "email" : "bobjansen@pm.me",
+    "url" : "https://github.com/bbjansen"
+  }],
   "license": "MIT",
   "repository": {
     "type": "git",
