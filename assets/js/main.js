@@ -12,4 +12,5 @@ $(document).ready(function () {
   initBackgroundImages();
   initScrollToHash();
   initPricingSlider();
+  initDevMessage();
 });

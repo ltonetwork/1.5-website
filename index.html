@@ -135,7 +135,7 @@
                             The app that helps you with social distancing.
                         </h1>
                         <h2 class="subtitle is-4 is-title-reveal">Supporting a safe (working) environment for everybody.</h2>
-                        <h3 class="subtitle is-4 is-muted is-bolded is-title-reveal">100% Data privacy guaranteed</h3>
+                        <h3 class="subtitle is-4 is-muted is-bolded is-title-reveal">100% data privacy guaranteed</h3>
                         <!--
             <div class="buttons">
               <a href="#features" class="button primary-btn">Discover</a>
@@ -161,14 +161,34 @@
 
         <div class="hero-foot mb-20">
             <div class="container">
-                <div class="tabs is-centered">
-                    <ul>
-                        <li><a><img class="partner-logo lazyload" data-src="assets/img/logos/clients/lto-network.svg" loading="lazy" alt="LTO Network"></a></li>
-                        <li><a><img class="partner-logo lazyload" data-src="assets/img/logos/clients/until.svg" loading="lazy" alt="UNTIL"></a></li>
-                        <li><a><img class="partner-logo lazyload" data-src="assets/img/logos/clients/tbwaneboko.svg" loading="lazy" alt="TBWA\NEBOKO"></a></li>
-                    </ul>
+                <div class="columns is-centered is-vcentered has-text-centered-mobile notification-box">
+                    <div class="column is-2 is-hidden-mobile">
+                        <img src="assets/img/icons/information.svg" alt="Information" class="image is-64x64">
+                    </div>
+                    <div class="column is-8">
+                        <div class="content">
+                            <p class="has-text-weight-bold">
+                                In response to media articles concerning the functionality of 1point5:
+                            </p>
+                            <ul>
+                                <li>1point5 is not a Covid-19 nor a medical health app,</li>
+                                <li>The purpose of 1point5 is to inform and educate people about social distancing,</li>
+                                <li>Since Bluetooth is not accurate enough, the goal is not to give an 100% accurate distance. In ideal circumstances 1point5 can alert you when someone is - expectedly - encroaching your 1.5 meter perimeter,</li>
+                                <li>Detected devices of family members, friends or inanimate objects such as laptops can be ignored by clicking the x button.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!--
+        <div class="tabs is-centered">
+          <ul>
+            <li><a><img class="partner-logo lazyload" data-src="assets/img/logos/clients/lto-network.svg" loading="lazy" alt="LTO Network"></a></li>
+            <li><a><img class="partner-logo lazyload" data-src="assets/img/logos/clients/until.svg" loading="lazy" alt="UNTIL"></a></li>
+            <li><a><img class="partner-logo lazyload" data-src="assets/img/logos/clients/tbwaneboko.svg" loading="lazy" alt="TBWA\NEBOKO"></a></li>
+          </ul>
+        </div>
+  -->
         </div>
     </section>
 
@@ -224,7 +244,7 @@
                 </div>
                 <div class="column is-4 is-offset-1 has-text-centered-mobile">
                     <h3 class="title is-3 mb-10 is-title-reveal">Customizable alarm settings</h3>
-                    <p class="subtitle is-5 is-muted">You can determine per device how you want to be alerted. Put on vibration or sound, or both.</p>
+                    <p class="subtitle is-5 is-muted">You can determine per device how you want to be alerted. Put on vibration or sound, or both. User can disable the alert from known devices around them.</p>
                 </div>
             </div>
         </div>
@@ -409,61 +429,17 @@
     </footer>
     <!-- Back To Top Button -->
     <div id="backtotop"><a href="#"></a></div>
-    <!--        <div class="sidebar">
-    <div class="sidebar-header">
-        <img src="assets/img/logos/fresh-square.svg">
-        <a class="sidebar-close" href="javascript:void(0);"><i data-feather="x"></i></a>
+    <div class="dev-notification notification">
+        <button class="delete"></button>
+        <p><strong>Developers: You can help us!</strong></p>
+        <p>
+            We are looking for developers and experts to improve the code which is released as open-source. Find out more about the free app on <a href="https://github.com/UNTILabs/1point5">GitHub</a> and this website. As a global digital community, we can work together to <strong>#MakeTechInclusive</strong>.
+        </p>
+        <div class="progress"></div>
     </div>
-    <div class="inner">
-        <ul class="sidebar-menu">
-            <li><span class="nav-section-title"></span></li>
-            <li class="have-children"><a href="#">
-                <span class="material-icons">apps</span>
-                <span>Apps</span>
-            </a>
-                <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Documents</a></li>
-                </ul>
-            </li>
-            <li class="have-children">
-                <a href="#">
-                    <span class="material-icons">duo</span>
-                    <span>Messages</span>
-                </a>
-                <ul>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">Compose</a></li>
-                    <li><a href="#">Video</a></li>
-                </ul>
-            </li>
-            <li class="have-children">
-                <a href="#">
-                    <span class="material-icons">insert_photo</span>
-                    <span>Media</span>
-                </a>
-                <ul>
-                    <li><a href="#">Library</a></li>
-                    <li><a href="#">Upload</a></li>
-                </ul>
-            </li>
-            <li class="have-children">
-                <a href="#">
-                    <span class="material-icons">policy</span>
-                    <span>Settings</span>
-                </a>
-                <ul>
-                    <li><a href="#">User settings</a></li>
-                    <li><a href="#">App settings</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</div>-->
-    <!-- Concatenated JS -->
     <script src="assets/js/app.js"></script>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 
     <!-- Fresh JS -->
     <script src="assets/js/functions.js"></script>

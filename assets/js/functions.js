@@ -270,3 +270,19 @@ function initPricingSlider() {
     }
   })();
 }
+
+function initDevMessage() {
+  var ls_devNotification = localStorage.getItem('dev-notification');
+
+  if (!ls_devNotification) {
+    var devNotification = document.getElementsByClassName('dev-notification')[0];
+    devNotification.classList.add('visible'); //    localStorage.setItem('dev-notification', 'dismissed');
+
+    devNotification.getElementsByClassName('delete')[0].addEventListener('click', function () {
+      devNotification.classList.remove('visible');
+    });
+    setTimeout(function () {
+      devNotification.classList.remove('visible');
+    }, 20500);
+  }
+}
