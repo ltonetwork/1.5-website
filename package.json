@@ -8,11 +8,18 @@
     "deploy": "gulp build && gh-pages -d dist --dotfiles=true --cleanup"
   },
   "author": "Houjehaags",
-  "contributors": [{
-    "name" : "BB Jansen",
-    "email" : "bobjansen@pm.me",
-    "url" : "https://github.com/bbjansen"
-  }],
+  "contributors": [
+    {
+      "name": "Renato Cardoso",
+      "email": "re2005@gmail.com",
+      "url": "https://github.com/re2005"
+    },
+    {
+      "name": "BB Jansen",
+      "email": "bobjansen@pm.me",
+      "url": "https://github.com/bbjansen"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
